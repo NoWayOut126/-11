@@ -1,0 +1,19 @@
+#Задание 1
+import random
+def f(c):
+    for i in range(c):
+        yield random.uniform(0, c)
+c = 3
+result = list(f(c))
+print(result)
+#Задание 2
+import itertools
+def merge_lists(list1, list2):
+    return list(itertools.chain(list1, list2))
+result = merge_lists([1, 2], [3, 4])
+print(result)  # [1, 2, 3, 4]
+#Задание 3
+def responses_creator(item_ids):
+    if item_ids is None:
+        item_ids = [None]
+    return [{'item_id': item_id} for item_id in item_ids]
